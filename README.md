@@ -11,17 +11,17 @@
 Aplikasi Web Service yang dibuat menggunakan laravel 8 dengan penerapan JWT untuk login
 
 ## Response List
-422 - Validator Error
-201 - Register Success
-200 - Auth & Process Success
-401 - Unauthotized
-409 - Register Vailed
+422 - Validator Error<br>
+201 - Register Success<br>
+200 - Auth & Process Success<br>
+401 - Unauthotized<br>
+409 - Register Vailed<br>
 
 ## Route
-POST /login
-POST /register
-POST /logout
-POST /task
-GET /task
-PUT /task/{id}
-DELETE /task
+POST /login<br>
+POST /register<br>
+POST /logout<br>
+POST /task<br>
+GET /task<br>
+PUT /task/{id}<br>
+DELETE /task/{id}<br>
