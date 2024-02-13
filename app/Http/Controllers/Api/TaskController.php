@@ -16,11 +16,11 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $data = Task::all();
+        $data = Task::selectRaw('id, title, description, DATE_FORMAT(due_date, "%b %d") as formatted_due_date, completed, user_id, created_at, updated_at')->orderBy('due_date', 'asc')->get();
 
         return response()->json([
             'success' => true,
-            'user'    => $data,
+            'data'    => $data,
         ], 201);
     }
 
