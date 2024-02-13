@@ -25,3 +25,10 @@ POST /task<br>
 GET /task<br>
 PUT /task/{id}<br>
 DELETE /task/{id}<br>
+
+## Parameter Header
+headers: {<br>
+        'Accept': 'application/json',<br>
+        'Content-Type': 'application/json',<br>
+        'Authorization': 'Bearer $token'<br>
+},
