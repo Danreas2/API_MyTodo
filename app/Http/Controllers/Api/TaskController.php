@@ -83,11 +83,11 @@ class TaskController extends Controller
      */
     public function show($id)
     {
-        $data = Task::find($id);
+        $data = Task::selectRaw('id, title, description, due_date, DATE_FORMAT(due_date, "%b %d") as formatted_due_date, completed, user_id, created_at, updated_at')->where('user_id', $id)->orderBy('due_date', 'asc')->get();
 
         return response()->json([
             'success' => true,
-            'user'    => $data,
+            'data'    => $data,
         ], 201);
     }
 
